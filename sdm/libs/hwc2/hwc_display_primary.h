@@ -30,7 +30,6 @@
 #ifndef __HWC_DISPLAY_PRIMARY_H__
 #define __HWC_DISPLAY_PRIMARY_H__
 
-#include <hardware/google/light/1.0/ILight.h>
 #include <limits>
 #include <string>
 #include <mutex>
@@ -138,12 +137,6 @@ class HWCDisplayPrimary : public HWCDisplay {
   void *output_buffer_base_ = nullptr;
   int default_mode_status_ = 0;
 
-  // Members for HBM feature
-  static constexpr float hbm_threshold_pct_ = 0.5f;
-  float hbm_threshold_px_ = std::numeric_limits<float>::max();
-  android::sp<hardware::google::light::V1_0::ILight> vendor_ILight_ = nullptr;
-  bool has_init_light_server_ = false;
-  bool high_brightness_mode_ = false;
 
   // Members for Color sampling feature
   histogram::HistogramCollector histogram;

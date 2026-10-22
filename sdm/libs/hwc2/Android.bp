@@ -46,7 +46,6 @@ cc_library_shared {
         "android.hardware.graphics.allocator@2.0",
         "android.hardware.graphics.composer@2.2",
         "android.hardware.graphics.composer@2.3",
-        "hardware.google.light@1.0",
     ],
 
     srcs: [
